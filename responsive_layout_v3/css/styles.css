@@ -1,0 +1,108 @@
+/*----------------
+Global
+----------------*/
+* {
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/*----------------
+Typography
+----------------*/
+
+h1, 
+h2, 
+p,
+li {
+    font-family: 'Roboto', 'Carrois Gothic SC', 'Segoe UI', sans-serif;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+}
+
+ul li a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+}
+
+.banner {
+    color: rgb(102, 102, 102);
+    line-height: 1.5rem;
+}
+
+/*----------------
+Navigation
+----------------*/
+
+header nav {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+header a{
+    background-color: white;
+    display: block;
+    margin-top: .5rem;
+    padding: .7rem 0;
+}
+
+header a:hover {
+    color: rgba(102, 102, 102, .5)
+}
+
+/*----------------
+Banner
+----------------*/
+
+.banner {
+    margin: 3rem auto;
+    width: 90%
+}
+
+.banner img {
+    width: 60%
+}
+
+/*----------------
+Project(s)
+----------------*/
+
+.project img {
+    width: 90%;
+}
+
+/*----------------
+Media queries
+----------------*/
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
