@@ -3,15 +3,37 @@ Global
 ----------------*/
 * {
     box-sizing: border-box;
-    background-color: whitesmoke;
 }
 
 .wrapper {
     width: 100%;
     text-align: center;
-    margin-top: 1.5rem;
 }
 
+#top-content {
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 1.5rem;
+}
+
+.project:last-child {
+    margin-bottom: 3rem;
+}
+
+#portfolio {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#bottom-content {
+    width: 100%;
+    padding: 3rem 1rem 1rem;
+    background-color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+}
 /*----------------
 Typography
 ----------------*/
@@ -21,12 +43,6 @@ h2,
 p,
 li {
     font-family: 'Roboto', 'Carrois Gothic SC', 'Segoe UI', sans-serif;
-}
-
-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(63, 63, 63);
 }
 
 h1 {
@@ -41,11 +57,10 @@ h2 {
     color: rgb(102, 102, 102);
 }
 
-ul li a {
+header li a {
     font-size: 1.3rem;
     font-weight: bold;
     color: rgb(102, 102, 102);
-    text-decoration: none;
 }
 
 .banner {
@@ -53,18 +68,24 @@ ul li a {
     line-height: 1.5rem;
 }
 
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
 /*----------------
 Navigation
 ----------------*/
 
-header nav {
+header ul {
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
-header a{
+header li{
     background-color: white;
     display: block;
     margin-top: .5rem;
@@ -80,12 +101,13 @@ Banner
 ----------------*/
 
 .banner {
-    margin: 3rem auto;
-    width: 90%
+    padding: 3rem;
+    margin: 0 auto;
+    line-height: 140%;
 }
 
 .banner img {
-    width: 60%
+    width: 70%;
 }
 
 /*----------------
@@ -93,16 +115,179 @@ Project(s)
 ----------------*/
 
 .project img {
-    width: 90%;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.project p {
+    line-height: 140%;
+    margin: 0 3rem;
+}
+
+.portfolio-heading {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+#portfolio h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*----------------
+Bottom Content
+----------------*/
+
+#contact h1 {
+    margin-bottom: 2rem;
+}
+
+.phone-number {
+    margin-bottom: 1rem;
+}
+
+.phone-number span,
+.email span {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: rgb(39, 39, 39);
+}
+
+.email {
+    margin-bottom: 3rem;
+}
+
+#contact .main {
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+hr {
+    border-color: rgb(233, 233, 233);
+}
+
+footer p {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+footer .name {
+    float: left;
+}
+
+footer .top-link {
+    float: right
+}
+
+.bottom-nav {
+    display: none;
 }
 
 /*----------------
 Media queries
 ----------------*/
 @media (min-width: 768px) {
+    header li {
+        display: inline-block;
+        margin-right: 2rem;
+        padding: 0;
+        background-color: inherit;
+    }
 
+    .banner img {
+        float: right;
+        width: 40%;
+    }
+
+    .banner p {
+        float: left;
+        width: calc(60% - 1rem);
+        margin-right: 1rem;
+        text-align: left;
+    }
+
+    .project:nth-child(odd) {
+        float: left;
+        width: 50%;
+    }
+
+    .project:nth-child(even) {
+        float: right;
+        width: 50%;
+    }
+
+    #contact {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #bottom-content {
+        padding-bottom: 3rem;
+    }
+
+    footer .top-link {
+        display: none;
+    }
+
+    .bottom-nav {
+        display: block;
+        float: right;
+        margin-top: 1rem;
+    }
+
+    .bottom-nav li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
 }
 
 @media (min-width: 1024px) {
+    header h1 {
+        float: left;
+        margin-left: 3rem;
+    }
 
+    header li {
+        float: right;
+    }
+
+    header li:first-child {
+        margin-right: 0;
+    }
+
+    .project:nth-child(-n+3),
+    .project:nth-child(n+3){
+        float: left;
+        width: 32%;
+    }
+
+    .project:nth-child(1),
+    .project:nth-child(4) {
+        margin-left: 2%;
+    }
+
+    .project:nth-child(3),
+    .project:nth-child(6) {
+        margin-right: 2%;
+    }
+
+    #contact {
+        width: 60%;
+    }
+
+    footer,
+    hr {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 }
+
+/*----------------
+Float Clearfix
+----------------*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

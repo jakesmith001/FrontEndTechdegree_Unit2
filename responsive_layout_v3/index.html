@@ -8,24 +8,24 @@
     </head>
     <body>
         <div class='wrapper'>
-            <header>
-                <h1>Jake Smith</h1>
-                <nav>
+            <div id="top-content">
+                <header class="clearfix">
+                    <h1>Jake Smith</h1>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                </nav>
-            </header>
-            <div class='banner'>
-                <img src="images/responsive-layout-profile.png">
-                <p>
-                    Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and and am excieted to put my skills to use!
-                </p>
+                </header>
+                <div class='banner clearfix'>
+                    <img src="images/responsive-layout-profile.png">
+                    <p>
+                        Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and and am excited to put my skills to use!
+                    </p>
+                </div>
             </div>
-            <div id='portfolio'>
-                <h1>Portfolio</h1>
+            <h1 class="portfolio-heading">Portfolio</h1>
+            <div id='portfolio' class="clearfix">
                 <div class='project'>
                     <img src="images/portfolio-1.png">
                     <h2 class='project-title'>Marketing Page</h2>
@@ -69,25 +69,29 @@
                     </p>
                 </div>
             </div>
-            <div id="contact">
-                <h1>Contact</h1>
-                <p>
-                    If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
-                </p>
-                <p class='phone-number'>
-                    Phone <span>+1 (111) 555-1234</span></p>
-                <p class='email'>
-                    Email <span>email@yoursite.com</span>
-                </p>
+            <div id="bottom-content">
+                <div id="contact">
+                    <h1>Contact</h1>
+                    <p class='main'>
+                        If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
+                    </p>
+                    <p class='phone-number'>
+                        Phone <span>+1 (111) 555-1234</span></p>
+                    <p class='email'>
+                        Email <span>email@yoursite.com</span>
+                    </p>
+                </div>
+                <hr>
+                <footer class="clearfix">
+                    <p class="name">Jake Smith</p>
+                    <p class="top-link"><a href="#">BACK TO TOP</a></p>
+                    <ul class="bottom-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </footer>
             </div>
-            <footer>
-                <p>
-                    Jake Smith
-                </p>
-                <p>
-                    <a href="#">BACK TO TOP</a>
-                </p>
-            </footer>
         </div>
     </body>
 </html>
