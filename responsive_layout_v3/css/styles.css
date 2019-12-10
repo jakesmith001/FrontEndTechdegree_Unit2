@@ -8,6 +8,8 @@ Global
 .wrapper {
     width: 100%;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #top-content {
@@ -113,6 +115,10 @@ Banner
 /*----------------
 Project(s)
 ----------------*/
+
+.project {
+    min-height: 380px;
+}
 
 .project img {
     width: 80%;
@@ -242,16 +248,24 @@ Media queries
 }
 
 @media (min-width: 1024px) {
+
+    #top-content {
+        padding-top: 2rem;
+    }
+
     header h1 {
         float: left;
         margin-left: 3rem;
     }
 
-    header li {
+    header ul {
         float: right;
+        margin-top: 0;
+        margin-right: 3rem;
+        width: auto;
     }
 
-    header li:first-child {
+    header li:last-child {
         margin-right: 0;
     }
 
